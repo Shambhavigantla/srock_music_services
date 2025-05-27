@@ -50,12 +50,29 @@ A Flutter application showcasing music services with:
 
 ```
 lib/
+
   model/          # Data models
+     nav_item.dart # Navigation items model
+     service_model.dart # Music services model
+
   view/           # UI screens and widgets
-  viewmodel/      # State management (Provider)
+     widgets/ # Reusable components
+         service_card.dart (if you want to reuse the ServiceCard widget)
+         custom_bottom_nav.dart (if you have a custom bottom navigation bar)
+     home_screen.dart
+     service_detail_screen.dart
+
+  viewmodel /      # State management (Provider)
+      nav_viewmodel.dart # Navigation state
+      service_viewmodel.dart # Services state
+
   repository/     # Firestore and data logic
+      nav_repository.dart # Navigation data source
+      service_repository.dart # Firestore service data
+
 assets/
   icons/          # SVG icons for services and navigation
+
 pubspec.yaml      # Dependencies and asset declarations
 ```
 
